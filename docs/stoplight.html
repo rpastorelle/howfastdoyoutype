@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trafficking</title>
+	<style type="text/css">
+		
+		
+		#trafficLight {
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			font: 100%/200px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+			margin: 100px auto 0;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px 4px rgba(0, 0, 0, .25);
+		}
+		
+		.readying {
+			-webkit-animation: trafficLightShift 4s linear;
+		}
+		
+		.ready {
+			box-shadow: 0 0 40px 4px rgba(0, 200, 0, 1) !important;
+		}
+		
+		@-webkit-keyframes trafficLightShift {
+			
+			/* Leave 0% out to transition from current state */
+			
+			16.66% { box-shadow: 0 0 0 0 rgba(0, 0, 0, .25); }
+			
+			17.00% { box-shadow: 0 0 0 0 rgba(200, 0, 0, 1); }
+			
+			33.33% { box-shadow: 0 0 15px 4px rgba(200, 0, 0, 1); }
+			
+			50.00% { box-shadow: 0 0 0 0 rgba(200, 0, 0, 1); }
+			
+			51.00% { box-shadow: 0 0 0 0 rgba(200, 200, 0, 1); }
+			
+			66.66% { box-shadow: 0 0 20px 4px rgba(200, 200, 0, 1); }
+			
+			83.33% { box-shadow: 0 0 0 0 rgba(200, 200, 0, 1); }
+			
+			84.00% { 17.00% { box-shadow: 0 0 0 0 rgba(0, 200, 0, 1); } }
+			
+			100.0% { box-shadow: 0 0 40px 4px rgba(0, 200, 0, 1); }
+		
+		}
+		
+	</style>
+</head>
+
+
+<body>
+
+	<div id="trafficLight" class="">Click me.</div>
+	
+	<script type="text/javascript">
+		
+		var light = document.querySelector('#trafficLight'),
+			onTrannyEnd = function(e) {
+				var tgt = e.target;
+				tgt.classList.remove('readying');
+				tgt.classList.add('ready');
+				tgt.innerText = "I'm ready!";
+			};
+		
+		light.addEventListener("webkitAnimationEnd", onTrannyEnd, false);
+		light.addEventListener("mozAnimationEnd", onTrannyEnd, false);
+		light.addEventListener("oAnimationEnd", onTrannyEnd, false);
+		light.addEventListener("animationEnd", onTrannyEnd, false);
+		light.addEventListener("click", function() { light.classList.add('readying'); }, false);
+		
+	</script>
+
+</body>
+</html>
