@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+{% include('_includes/head.html') %}
+<body class="" data-color="">
+
+<div id="container">
+	{% include('_includes/header.html') %}
+
+	<div id="main" role="main">
+
+        <form>
+            <div id="phrase">{{ data.phrase.lc_phrase }}</div>
+            <textarea id="entry" class="trans" placeholder="how fast do you type..."></textarea>
+            <div id="note">type to begin. press <kbd>enter</kbd> when done</div>
+            <div id="timer" class="trans">00</div>
+            <div id="log">
+                <div id="wpm" class="trans"></div>
+                <div id="errors" class="trans"></div>
+                <div><kbd>s</kbd> for stats</div>
+            </div>
+            <input type="hidden" name="phraseId" value="{{ data.phrase.id }}" id="phraseId" />
+        </form>
+
+	</div>
+
+  {% include('_includes/footer.html') %}
+
+</div> <!--! end of #container -->
+
+{% include('_includes/overlays.html') %}
+{% include('_includes/scripts.html') %}
+
+</body>
+</html>

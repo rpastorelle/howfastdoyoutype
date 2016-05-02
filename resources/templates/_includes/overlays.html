@@ -1,0 +1,37 @@
+<div id="help" class="overlay">
+    <div>
+    	<span style='float:right;'><kbd>ESC</kbd> close</span>
+        <h4>Keyboard Shortcuts</h4>
+        <table>
+            <tr><td><kbd>enter</kbd> or <kbd>esc</kbd></td><td>Stop timer</td></tr>
+            <tr><td><kbd>U</kbd></td><td>Set [U]sername</td></tr>
+            <tr><td><kbd>N</kbd> or <kbd>&rarr;</kbd></td><td>[N]ext</td></tr>
+            <tr><td><kbd>R</kbd></td><td>[R]etry Phrase</td></tr>
+            <tr><td><kbd>S</kbd></td><td>[S]tatistics</td></tr>
+            <tr><td><kbd>.</kbd></td><td>Replay Animation[.]</td></tr>
+            <tr><td><kbd>h</kbd></td><td>[H]elp</td></tr>
+        </table>
+    </div>
+</div>
+<div id="scoreboard" class="overlay">
+    <div>
+    	<span style='float:right;'><kbd>ESC</kbd> close</span>
+        <h4>STATISTICS</h4>
+        <h3><strong>{{ data.phrase.name }}</strong></h3>
+        <p>
+        	Type: <strong>{{ data.phrase.type }}</strong><br />
+            <strong>{{ data.phrase.length }}</strong> Keystrokes<br />
+        </p>
+        <p id="stats_recap"></p>
+    </div>
+</div>
+<div id="userscreen" class="overlay">
+    <div>
+    	<span style='float:right;'><kbd>ESC</kbd> close</span>
+        <h4>Set Username</h4>
+        <p>
+        	<input type="text" name="username" id="username" />
+        	<button id="saveUsername">Save</button>
+        </p>
+    </div>
+</div>

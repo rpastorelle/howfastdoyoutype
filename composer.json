@@ -1,0 +1,30 @@
+{
+    "name": "rpastorelle/howfastdoyoutype",
+    "require": {
+        "aura/sql": "^2.4",
+        "aura/sqlquery": "^2.6",
+        "robmorgan/phinx": "^0.5.3",
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.0",
+        "twig/twig": "^1.23",
+        "vlucas/phpdotenv": "^2.2"
+    },
+    "authors": [
+      {
+        "name": "Ryan Pastorelle",
+        "email": "rpastorelle@yahoo.com"
+      }
+    ],
+    "autoload": {
+      "files": [
+        "src/functions.php"
+      ],
+      "classmap": [
+        "src/"
+      ],
+      "psr-4": {
+        "App\\": "src/App",
+        "Core\\": "src/Core"
+      }
+    }
+}

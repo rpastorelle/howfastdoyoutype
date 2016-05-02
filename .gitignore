@@ -1,0 +1,13 @@
+.DS_Store
+.vagrant
+phinx.yml
+.env
+.htaccess
+.imdone
+
+vendor/
+node_modules/
+bower_components/
+test/
+tests/
+_bak/
